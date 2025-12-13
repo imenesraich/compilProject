@@ -1,0 +1,54 @@
+// Fichier test pour CryptoLang Lexical Analyzer
+#! Auteur: Testeur
+/* Test complet de tous les tokens */
+
+// Structure principale
+@protocol myProtocol
+@import "cryptoLib"
+@keyspace mainKey
+@main
+
+@loop
+@for i ::= 0x1F
+step 1
+rounds 10
+
+// Types
+bit nibble byte word dword qword
+plain cipher hash key128 key256 key512
+packet
+
+// Opérations
+x ::= 42
+y :: 0xABCD
+z ?[x == y]:[x != y]
+
+shift << >>
+output -> input
+power ** 
++ - * / % = < > ! & ^ ~ 
+== != <= >= && || ^^ :
+
+// Opérations cryptographiques
+a @> b
+c <@ d
+e #> f
+g @# h
+i &> j
+k <& l
+
+// Delimiteurs
+{ } [ ] ( ) ; , . 
+
+// Littéraux
+"chaine de test"
+"chaine non terminee
+identifiant_valide_123
+
+// Commentaires
+// ligne unique
+/* bloc
+   multi-lignes */
+#! commentaire special
+
+
