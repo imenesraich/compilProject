@@ -336,7 +336,7 @@ void print_header(const char* filename) {
     printf("===================================================================\n");
     printf(" Project:  Compilateur CryptoLang                                 \n");
     printf(" Version:  1.0.0                                                  \n");
-    printf(" Authors:  Hamadache, Allag, Foudili, Rabia                       \n");
+    printf(" Authors:  Hamadache, Allag, Sraich, Foudili, Rabia                       \n");
     printf(" File:     %-51s\n", filename ? filename : "stdin");
     printf("===================================================================\n");
     printf("\n");
