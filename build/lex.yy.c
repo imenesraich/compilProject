@@ -1,5 +1,6 @@
+#line 1 "build/lex.yy.c"
 
-#line 3 "lex.yy.c"
+#line 3 "build/lex.yy.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -382,29 +383,29 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static const flex_int16_t yy_accept[193] =
+static const flex_int16_t yy_accept[195] =
     {   0,
-        0,    0,   82,   80,   77,   78,   59,   79,   80,   55,
-       60,   67,   68,   53,   51,   70,   52,   71,   54,   74,
-       74,   72,   69,   57,   56,   58,   80,   80,   76,   65,
-       66,   61,   76,   76,   76,   76,   76,   76,   76,   76,
-       76,   76,   76,   63,   80,   64,   62,   77,   39,   79,
-       75,    0,    3,   33,   42,   35,   37,   47,    2,    1,
-       74,    0,   28,   30,   36,   48,   45,   40,   32,   38,
-       41,   46,   29,   34,   31,    0,    0,    0,    0,    0,
-        0,    0,    0,   76,   44,   76,   76,   76,   76,   76,
-       76,   76,   76,   76,   76,   76,   76,   76,   43,    3,
+        0,    0,   82,   80,    2,    1,   61,   80,   80,   57,
+       62,   70,   71,   55,   53,   73,   54,   74,   56,   77,
+       77,   75,   72,   59,   58,   60,   80,   80,   79,   68,
+       69,   64,   79,   79,   79,   79,   79,   79,   79,   79,
+       79,   79,   79,   66,   63,   67,   65,    2,   44,    0,
+       78,    0,   49,   39,   51,   42,   33,    0,    3,   77,
+        0,   29,   30,   32,   52,   34,   37,   45,   48,   43,
+       46,   38,   31,   50,   47,    0,    0,    0,    0,    0,
+        0,    0,    0,   79,   41,   79,   79,   79,   79,   79,
+       79,   79,   79,   79,   79,   79,   79,   79,   40,    0,
 
-        1,   73,   27,   49,   50,    0,    0,    0,    0,    0,
-        0,    0,    0,   14,   76,   76,   76,   76,   76,   76,
-       76,   76,   76,   76,   76,   76,    0,   10,    0,    0,
-        0,    0,    0,    0,   16,   76,   76,   22,   76,   76,
-       76,   76,   76,   76,   76,   76,   12,   17,    0,    0,
-        0,    9,    8,    0,    0,   76,   18,   76,   76,   76,
-       76,   76,   20,   19,   76,    0,    0,    0,    0,    0,
-       21,   23,   24,   25,   15,   26,   13,    0,    6,    0,
-        0,   11,    0,    0,    0,    0,    7,    4,    0,    0,
-        5,    0
+        0,    3,   76,   28,   35,   36,    0,    0,    0,    0,
+        0,    0,    0,    0,   16,   79,   79,   79,   79,   79,
+       79,   79,   79,   79,   79,   79,   79,    4,    0,   11,
+        0,    0,    0,    0,    0,    0,   18,   79,   79,   24,
+       79,   79,   79,   79,   79,   79,   79,   79,   14,   19,
+        0,    0,    0,   10,    9,    0,    0,   79,   20,   79,
+       79,   79,   79,   79,   22,   21,   79,    0,    0,    0,
+        0,    0,   23,   25,   26,   27,   17,   15,   13,    0,
+        7,    0,    0,   12,    0,    0,    0,    0,    8,    5,
+        0,    0,    6,    0
 
     } ;
 
@@ -451,59 +452,59 @@ static const YY_CHAR yy_meta[63] =
         1,    1
     } ;
 
-static const flex_int16_t yy_base[198] =
+static const flex_int16_t yy_base[200] =
     {   0,
-        0,    0,  237,  238,  234,  238,  208,   58,   60,  238,
-       57,  238,  238,  223,  238,  238,  205,  238,   55,   55,
-       76,   46,  238,   75,  205,   40,  198,  107,    0,  238,
-      238,  194,   42,  185,  172,  190,  185,  181,   44,  168,
-      174,  168,  172,  238,  160,  238,  238,  217,  238,   75,
-      238,    0,    0,  238,  238,  238,  238,  238,  238,    0,
-       97,    0,  191,  238,  238,  238,  191,  238,  238,  238,
-      238,  188,  238,  238,  238,  167,  165,  166,  171,  162,
-      173,  157,  159,    0,  238,  153,  152,  155,  155,  150,
-      144,  163,  161,  162,  149,  142,  155,  143,  238,    0,
+        0,    0,  244,  245,  241,  245,  215,   58,  213,  245,
+       56,  245,  245,  229,  245,  245,  211,  245,   54,   54,
+       68,   69,  245,   86,  211,   39,  204,  111,    0,  245,
+      245,  200,   24,  191,  178,  196,  191,  187,   32,  174,
+      180,  174,  178,  245,  166,  245,  245,  223,  245,   74,
+      245,  221,  245,  245,  245,  245,  245,  212,    0,  101,
+        0,  195,  245,  245,  245,  245,  195,  245,  245,  245,
+      245,  192,  245,  245,  245,  171,  169,  170,  175,  166,
+      177,  161,  163,    0,  245,  157,  156,  159,  159,  154,
+      148,  167,  165,  166,  153,  146,  159,  147,  245,  187,
 
-        0,    0,  238,  238,  238,  154,  141,  142,  133,  141,
-      145,  139,  133,    0,  145,  142,  132,  140,   85,  144,
-      136,  136,  127,  130,  127,  136,  125,  238,  125,  118,
-      117,  113,  104,  119,    0,  114,  110,    0,  128,  125,
-      127,   98,  102,   94,  101,  100,    0,    0,   87,   86,
-       87,  238,  238,   87,   80,   81,    0,  109,  109,  111,
-       88,   74,    0,    0,   74,   77,   71,   87,   84,   81,
-        0,    0,    0,    0,    0,    0,    0,   67,  238,   72,
-       61,  238,   59,   66,   45,   48,  238,  238,   35,   36,
-      238,  238,  159,  161,  165,  169,   66
+       87,    0,    0,  245,  245,  245,  157,  144,  145,  136,
+      144,  148,  142,  136,    0,  148,  145,  135,  143,   62,
+      147,  139,  139,  130,  133,  130,  139,  245,  128,  245,
+      126,  109,  110,  111,  100,  114,    0,  109,  109,    0,
+      129,  126,  128,   99,  103,   95,  102,  101,    0,    0,
+       88,   86,   87,  245,  245,   87,   81,   82,    0,  110,
+      110,  112,   89,   75,    0,    0,   75,   78,   72,   88,
+       76,   73,    0,    0,    0,    0,    0,    0,    0,   56,
+      245,   70,   58,  245,   57,   64,   58,   62,  245,  245,
+       50,   51,  245,  245,  163,  165,  169,  173,   92
 
     } ;
 
-static const flex_int16_t yy_def[198] =
+static const flex_int16_t yy_def[200] =
     {   0,
-      192,    1,  192,  192,  192,  192,  192,  193,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  194,  192,
-      192,  192,  194,  194,  194,  194,  194,  194,  194,  194,
-      194,  194,  194,  192,  192,  192,  192,  192,  192,  193,
-      192,  193,  195,  192,  192,  192,  192,  192,  192,  196,
-      192,  197,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,  192,  192,  194,  192,  194,  194,  194,  194,  194,
-      194,  194,  194,  194,  194,  194,  194,  194,  192,  195,
+      194,    1,  194,  194,  194,  194,  194,  195,  194,  194,
+      194,  194,  194,  194,  194,  194,  194,  194,  194,  194,
+      194,  194,  194,  194,  194,  194,  194,  194,  196,  194,
+      194,  194,  196,  196,  196,  196,  196,  196,  196,  196,
+      196,  196,  196,  194,  194,  194,  194,  194,  194,  195,
+      194,  195,  194,  194,  194,  194,  194,  197,  198,  194,
+      199,  194,  194,  194,  194,  194,  194,  194,  194,  194,
+      194,  194,  194,  194,  194,  194,  194,  194,  194,  194,
+      194,  194,  194,  196,  194,  196,  196,  196,  196,  196,
+      196,  196,  196,  196,  196,  196,  196,  196,  194,  197,
 
-      196,  197,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,  192,  192,  194,  194,  194,  194,  194,  194,  194,
-      194,  194,  194,  194,  194,  194,  192,  192,  192,  192,
-      192,  192,  192,  192,  194,  194,  194,  194,  194,  194,
-      194,  194,  194,  194,  194,  194,  194,  194,  192,  192,
-      192,  192,  192,  192,  192,  194,  194,  194,  194,  194,
-      194,  194,  194,  194,  194,  192,  192,  192,  192,  192,
-      194,  194,  194,  194,  194,  194,  194,  192,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,    0,  192,  192,  192,  192,  192
+      197,  198,  199,  194,  194,  194,  194,  194,  194,  194,
+      194,  194,  194,  194,  196,  196,  196,  196,  196,  196,
+      196,  196,  196,  196,  196,  196,  196,  194,  194,  194,
+      194,  194,  194,  194,  194,  194,  196,  196,  196,  196,
+      196,  196,  196,  196,  196,  196,  196,  196,  196,  196,
+      194,  194,  194,  194,  194,  194,  194,  196,  196,  196,
+      196,  196,  196,  196,  196,  196,  196,  194,  194,  194,
+      194,  194,  196,  196,  196,  196,  196,  196,  196,  194,
+      194,  194,  194,  194,  194,  194,  194,  194,  194,  194,
+      194,  194,  194,    0,  194,  194,  194,  194,  194
 
     } ;
 
-static const flex_int16_t yy_nxt[301] =
+static const flex_int16_t yy_nxt[308] =
     {   0,
         4,    5,    6,    7,    8,    9,   10,   11,   12,   13,
        14,   15,   16,   17,   18,   19,   20,   21,   21,   21,
@@ -511,36 +512,37 @@ static const flex_int16_t yy_nxt[301] =
        29,   29,   30,    4,   31,   32,   29,   33,   34,   35,
        29,   29,   36,   29,   37,   29,   29,   38,   29,   39,
        40,   41,   42,   29,   29,   43,   29,   29,   44,   45,
-       46,   47,   51,   53,   55,   59,   71,   72,  102,   63,
-       60,   61,   61,   61,   61,   61,   61,   61,   64,   51,
-       93,  191,   65,  190,   56,   86,  189,   54,   66,   94,
-      188,   52,   61,   61,   61,   61,   61,   61,   61,   87,
+       46,   47,   51,   54,   58,   71,   72,   86,   93,   59,
+       60,   60,   60,   60,   60,   60,   60,   94,   51,  141,
+      142,   87,  143,   55,   60,   60,   60,   60,   60,   60,
+       60,   52,   62,   65,  103,   63,  193,  101,  192,   66,
 
-       67,   68,  139,  140,   69,  141,  187,  186,   52,  185,
-      184,   62,   74,   61,   61,   61,   61,   61,   61,   61,
-      183,  182,  181,  180,  179,  178,  177,  176,  175,  174,
-      173,  172,  171,  170,   75,  169,  168,  167,  166,  165,
-      164,  163,  162,  161,  160,  159,  158,   76,   77,  157,
-       78,   79,   80,   81,  156,  155,   82,  154,   83,   50,
-      153,   50,   50,   84,   84,  100,  152,  100,  100,  101,
-      151,  101,  101,  150,  149,  148,  147,  146,  145,  144,
-      143,  142,  138,  137,  136,  135,  134,  133,  132,  131,
-      130,  129,  128,  127,  126,  125,  124,  123,  122,  121,
+      191,   64,  128,  190,  189,  188,  187,   52,  186,  185,
+       61,   67,   68,  184,  183,   69,   74,   60,   60,   60,
+       60,   60,   60,   60,  182,  181,  180,  179,  178,  177,
+      176,  175,  174,  173,  172,  171,  170,  169,   75,  168,
+      167,  166,  165,  164,  163,  162,  161,  160,  159,  158,
+      157,   76,   77,  156,   78,   79,   80,   81,  155,  154,
+       82,  153,   83,   50,   50,   50,   50,   84,   84,  100,
+      100,  100,  100,  102,  152,  102,  102,  151,  150,  149,
+      148,  147,  146,  145,  144,  140,  139,  138,  137,  136,
+      135,  134,  133,  132,  131,  130,  129,  101,  127,  126,
 
-      120,  119,  118,  117,  116,  115,  114,  113,  112,  111,
-      110,  109,  108,  107,  106,  105,  104,  103,   48,   99,
-       98,   97,   96,   95,   92,   91,   90,   89,   88,   85,
-       73,   70,   58,   57,   49,   48,  192,    3,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192
+      125,  124,  123,  122,  121,  120,  119,  118,  117,  116,
+      115,  114,  113,  112,  111,  110,  109,  108,  107,  106,
+      105,  104,  101,  194,   48,   99,   98,   97,   96,   95,
+       92,   91,   90,   89,   88,   85,   73,   70,   57,   56,
+       53,   49,   48,  194,    3,  194,  194,  194,  194,  194,
+      194,  194,  194,  194,  194,  194,  194,  194,  194,  194,
+      194,  194,  194,  194,  194,  194,  194,  194,  194,  194,
+      194,  194,  194,  194,  194,  194,  194,  194,  194,  194,
+      194,  194,  194,  194,  194,  194,  194,  194,  194,  194,
+      194,  194,  194,  194,  194,  194,  194,  194,  194,  194,
 
+      194,  194,  194,  194,  194,  194,  194
     } ;
 
-static const flex_int16_t yy_chk[301] =
+static const flex_int16_t yy_chk[308] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -548,39 +550,40 @@ static const flex_int16_t yy_chk[301] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    8,    9,   11,   19,   26,   26,  197,   22,
-       19,   20,   20,   20,   20,   20,   20,   20,   22,   50,
-       39,  190,   24,  189,   11,   33,  186,    9,   24,   39,
-      185,    8,   21,   21,   21,   21,   21,   21,   21,   33,
+        1,    1,    8,   11,   19,   26,   26,   33,   39,   19,
+       20,   20,   20,   20,   20,   20,   20,   39,   50,  120,
+      120,   33,  120,   11,   21,   21,   21,   21,   21,   21,
+       21,    8,   22,   24,  199,   22,  192,  101,  191,   24,
 
-       24,   24,  119,  119,   24,  119,  184,  183,   50,  181,
-      180,   20,   28,   61,   61,   61,   61,   61,   61,   61,
-      178,  170,  169,  168,  167,  166,  165,  162,  161,  160,
-      159,  158,  156,  155,   28,  154,  151,  150,  149,  146,
-      145,  144,  143,  142,  141,  140,  139,   28,   28,  137,
-       28,   28,   28,   28,  136,  134,   28,  133,   28,  193,
-      132,  193,  193,  194,  194,  195,  131,  195,  195,  196,
-      130,  196,  196,  129,  127,  126,  125,  124,  123,  122,
-      121,  120,  118,  117,  116,  115,  113,  112,  111,  110,
-      109,  108,  107,  106,   98,   97,   96,   95,   94,   93,
+      188,   22,  101,  187,  186,  185,  183,   50,  182,  180,
+       20,   24,   24,  172,  171,   24,   28,   60,   60,   60,
+       60,   60,   60,   60,  170,  169,  168,  167,  164,  163,
+      162,  161,  160,  158,  157,  156,  153,  152,   28,  151,
+      148,  147,  146,  145,  144,  143,  142,  141,  139,  138,
+      136,   28,   28,  135,   28,   28,   28,   28,  134,  133,
+       28,  132,   28,  195,  195,  195,  195,  196,  196,  197,
+      197,  197,  197,  198,  131,  198,  198,  129,  127,  126,
+      125,  124,  123,  122,  121,  119,  118,  117,  116,  114,
+      113,  112,  111,  110,  109,  108,  107,  100,   98,   97,
 
-       92,   91,   90,   89,   88,   87,   86,   83,   82,   81,
-       80,   79,   78,   77,   76,   72,   67,   63,   48,   45,
-       43,   42,   41,   40,   38,   37,   36,   35,   34,   32,
-       27,   25,   17,   14,    7,    5,    3,  192,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192,
-      192,  192,  192,  192,  192,  192,  192,  192,  192,  192
+       96,   95,   94,   93,   92,   91,   90,   89,   88,   87,
+       86,   83,   82,   81,   80,   79,   78,   77,   76,   72,
+       67,   62,   58,   52,   48,   45,   43,   42,   41,   40,
+       38,   37,   36,   35,   34,   32,   27,   25,   17,   14,
+        9,    7,    5,    3,  194,  194,  194,  194,  194,  194,
+      194,  194,  194,  194,  194,  194,  194,  194,  194,  194,
+      194,  194,  194,  194,  194,  194,  194,  194,  194,  194,
+      194,  194,  194,  194,  194,  194,  194,  194,  194,  194,
+      194,  194,  194,  194,  194,  194,  194,  194,  194,  194,
+      194,  194,  194,  194,  194,  194,  194,  194,  194,  194,
 
+      194,  194,  194,  194,  194,  194,  194
     } ;
 
 /* Table of booleans, true if rule could match eol. */
 static const flex_int32_t yy_rule_can_match_eol[82] =
     {   0,
-0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
+1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 
@@ -600,362 +603,50 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "cryptolang2.l"
-#line 2 "cryptolang2.l"
-
-
+#line 1 "src/lexer/cryptolang.l"
+#line 2 "src/lexer/cryptolang.l"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "tokens.h"
+#include "ts.h"      /* Defined in src/symbol_table/ */
+#include "y.tab.h"   /* Generated by Bison */
 
-/* ============================================================================
- * VARIABLES GLOBALES
- * ============================================================================ */
+/* ====================================================================
+   GLOBAL VARIABLES (Required by main.c and Parser)
+   ==================================================================== */
+int line_number = 1;       
+int column_number = 1;     
+int error_count = 0;       
 
-/* Suivi de la position dans le fichier source */
-int line_number = 1;           /* Numero de ligne courante */
-int column_number = 1;         /* Numero de colonne courante */
-int prev_column = 1;           /* Colonne du debut du token courant */
+/* ====================================================================
+   HELPER FUNCTIONS
+   ==================================================================== */
 
-/* Compteurs statistiques */
-int token_count = 0;           /* Nombre total de tokens reconnus */
-int error_count = 0;           /* Nombre d'erreurs lexicales detectees */
-int comment_count = 0;         /* Nombre de commentaires */
-
-/* Compteurs par categorie de tokens */
-int keyword_count = 0;         /* Mots-cles */
-int identifier_count = 0;      /* Identifiants */
-int operator_count = 0;        /* Operateurs */
-int literal_count = 0;         /* Litteraux */
-int delimiter_count = 0;       /* Delimiteurs */
-
-/* Buffer pour les messages d'erreur */
-char error_buffer[256];
-
-/* Mode verbeux pour le debugging */
-int verbose_mode = 1;
-
-/* ============================================================================
- * STRUCTURES DE DONNEES
- * ============================================================================ */
-
-/* Structure pour stocker les informations d'un token */
-typedef struct {
-    int type;
-    char* value;
-    int line;
-    int column;
-} Token;
-
-/* Liste chainee pour stocker tous les tokens */
-typedef struct TokenNode {
-    Token* token;
-    struct TokenNode* next;
-} TokenNode;
-
-TokenNode* token_list_head = NULL;
-TokenNode* token_list_tail = NULL;
-
-/* ============================================================================
- * FONCTIONS UTILITAIRES
- * ============================================================================ */
-
-/* Creer un nouveau token */
-Token* create_token(int type, const char* value) {
-    Token* token = (Token*)malloc(sizeof(Token));
-    if (!token) {
-        fprintf(stderr, "Error: Memory allocation failed for token\n");
-        exit(1);
-    }
-    token->type = type;
-    token->value = strdup(value);
-    token->line = line_number;
-    token->column = prev_column;
-    return token;
-}
-
-/* Ajouter un token a la liste */
-void add_token_to_list(Token* token) {
-    TokenNode* node = (TokenNode*)malloc(sizeof(TokenNode));
-    if (!node) {
-        fprintf(stderr, "Error: Memory allocation failed for token node\n");
-        exit(1);
-    }
-    node->token = token;
-    node->next = NULL;
-    
-    if (token_list_tail == NULL) {
-        token_list_head = token_list_tail = node;
-    } else {
-        token_list_tail->next = node;
-        token_list_tail = node;
-    }
-}
-
-/* Obtenir le nom d'un type de token */
-const char* get_token_name(int type) {
-    switch(type) {
-        /* Mots-cles de structure */
-        case TOKEN_PROTOCOL:      return "PROTOCOL";
-        case TOKEN_ENDPROTOCOL:   return "ENDPROTOCOL";
-        case TOKEN_IMPORT:        return "IMPORT";
-        case TOKEN_KEYSPACE:      return "KEYSPACE";
-        case TOKEN_MAIN:          return "MAIN";
-        
-        /* Mots-cles de controle */
-        case TOKEN_LOOP:          return "LOOP";
-        case TOKEN_FOR:           return "FOR";
-        case TOKEN_ROTATE:        return "ROTATE";
-        case TOKEN_STEP:          return "STEP";
-        case TOKEN_ROUNDS:        return "ROUNDS";
-        
-        /* Types de base */
-        case TOKEN_BIT:           return "TYPE_BIT";
-        case TOKEN_NIBBLE:        return "TYPE_NIBBLE";
-        case TOKEN_BYTE:          return "TYPE_BYTE";
-        case TOKEN_WORD:          return "TYPE_WORD";
-        case TOKEN_DWORD:         return "TYPE_DWORD";
-        case TOKEN_QWORD:         return "TYPE_QWORD";
-        
-        /* Types cryptographiques */
-        case TOKEN_PLAIN:         return "TYPE_PLAIN";
-        case TOKEN_CIPHER:        return "TYPE_CIPHER";
-        case TOKEN_HASH:          return "TYPE_HASH";
-        case TOKEN_KEY128:        return "TYPE_KEY128";
-        case TOKEN_KEY256:        return "TYPE_KEY256";
-        case TOKEN_KEY512:        return "TYPE_KEY512";
-        
-        /* Structures */
-        case TOKEN_PACKET:        return "PACKET";
-        
-        /* Operateurs de declaration */
-        case TOKEN_DECLARE:       return "DECLARE";
-        case TOKEN_ASSIGN:        return "ASSIGN";
-        case TOKEN_SECURE_ASSIGN: return "SECURE_ASSIGN";
-        
-        /* Operateurs conditionnels */
-        case TOKEN_IF:            return "IF";
-        case TOKEN_ELIF:          return "ELIF";
-        case TOKEN_ELSE:          return "ELSE";
-        
-        /* Operateurs arithmetiques */
-        case TOKEN_PLUS:          return "PLUS";
-        case TOKEN_MINUS:         return "MINUS";
-        case TOKEN_MULT:          return "MULT";
-        case TOKEN_DIV:           return "DIV";
-        case TOKEN_MOD:           return "MOD";
-        case TOKEN_POWER:         return "POWER";
-        
-        /* Operateurs de comparaison */
-        case TOKEN_EQ:            return "EQUAL";
-        case TOKEN_NEQ:           return "NOT_EQUAL";
-        case TOKEN_LT:            return "LESS_THAN";
-        case TOKEN_GT:            return "GREATER_THAN";
-        case TOKEN_LEQ:           return "LESS_EQUAL";
-        case TOKEN_GEQ:           return "GREATER_EQUAL";
-        
-        /* Operateurs logiques */
-        case TOKEN_AND:           return "LOGICAL_AND";
-        case TOKEN_OR:            return "LOGICAL_OR";
-        case TOKEN_NOT:           return "LOGICAL_NOT";
-        case TOKEN_XOR_LOGIC:     return "LOGICAL_XOR";
-        
-        /* Operateurs bitwise */
-        case TOKEN_BIT_AND:       return "BITWISE_AND";
-        case TOKEN_BIT_XOR:       return "BITWISE_XOR";
-        case TOKEN_BIT_NOT:       return "BITWISE_NOT";
-        case TOKEN_SHIFT_LEFT:    return "SHIFT_LEFT";
-        case TOKEN_SHIFT_RIGHT:   return "SHIFT_RIGHT";
-	case TOKEN_ROTATE_LEFT:    return "ROTATE_LEFT(<<<)"; // Ajout
-        case TOKEN_ROTATE_RIGHT:   return "ROTATE_RIGHT(>>>)"; // Ajout        
-        /* Operateurs cryptographiques */
-        case TOKEN_ENCRYPT:       return "ENCRYPT";
-        case TOKEN_DECRYPT:       return "DECRYPT";
-        case TOKEN_HASH_CALC:     return "HASH_CALC";
-        case TOKEN_HASH_VERIFY:   return "HASH_VERIFY";
-        case TOKEN_SIGN:          return "SIGN";
-        case TOKEN_VERIFY_SIGN:   return "VERIFY_SIGN";
-        
-        /* Entrees/Sorties */
-        case TOKEN_OUTPUT:        return "OUTPUT";
-        case TOKEN_INPUT:         return "INPUT";
-        
-        /* Delimiteurs */
-        case TOKEN_LBRACE:        return "LBRACE";
-        case TOKEN_RBRACE:        return "RBRACE";
-        case TOKEN_LBRACKET:      return "LBRACKET";
-        case TOKEN_RBRACKET:      return "RBRACKET";
-        case TOKEN_LPAREN:        return "LPAREN";
-        case TOKEN_RPAREN:        return "RPAREN";
-        case TOKEN_SEMICOLON:     return "SEMICOLON";
-        case TOKEN_COMMA:         return "COMMA";
-        case TOKEN_DOT:           return "DOT";
-        case TOKEN_COLON:         return "COLON";
-        
-        /* Litteraux */
-        case TOKEN_IDENTIFIER:    return "IDENTIFIER";
-        case TOKEN_INTEGER:       return "INTEGER";
-        case TOKEN_HEX:           return "HEXADECIMAL";
-        case TOKEN_STRING:        return "STRING";
-        
-        default:                  return "UNKNOWN";
-    }
-}
-
-/* Afficher un token */
-/* Afficher un token */
-/* Afficher un token */
-void print_token(int type, const char* value) {
-    token_count++;
-
-    /* ==========================================================
-     * CATEGORISATION BASÉE SUR LES PLAGES DE TOKENS.H
-     * ========================================================== */
-
-    // 1. MOTS-CLÉS (258 à 280)
-    if (type >= TOKEN_PROTOCOL && type <= TOKEN_KEY512) {
-        keyword_count++;
-        printf("[DEBUG] Mots-cles compte: %s\n", get_token_name(type));
-    } 
-    // 2. OPÉRATEURS COMPLEXES (281 à 304)
-    else if (type >= TOKEN_DECLARE && type <= TOKEN_INPUT) {
-        operator_count++;
-        printf("[DEBUG] Operateurs (Complexes) compte: %s\n", get_token_name(type));
-    } 
-    // 3. LITTÉRAUX (310 à 313)
-    else if (type >= TOKEN_IDENTIFIER && type <= TOKEN_STRING) {
-        if (type == TOKEN_IDENTIFIER) {
-            identifier_count++;
-            printf("[DEBUG] Identifiant compte: %s -> '%s'\n", get_token_name(type), value);
-        } else {
-            literal_count++;
-            printf("[DEBUG] Literal compte: %s -> '%s'\n", get_token_name(type), value);
-        }
-    } 
-    // 4. OPÉRATEURS SIMPLES (ASCII : +, -, =, <, etc.)
-    else if (type == TOKEN_PLUS || type == TOKEN_MINUS || type == TOKEN_MULT || 
-             type == TOKEN_DIV || type == TOKEN_MOD || type == TOKEN_LT || 
-             type == TOKEN_GT || type == TOKEN_NOT || type == TOKEN_BIT_AND || 
-             type == TOKEN_BIT_XOR || type == TOKEN_BIT_NOT || type == TOKEN_COLON || 
-             type == TOKEN_ASSIGN) { 
-        operator_count++;
-        printf("[DEBUG] Operateurs (Simples) compte: %s\n", get_token_name(type));
-    }
-    // 5. DÉLIMITEURS (ASCII : {, }, [, ], (, ), ;, ,, .)
-    else if (type == TOKEN_LBRACE || type == TOKEN_RBRACE || type == TOKEN_LBRACKET || 
-             type == TOKEN_RBRACKET || type == TOKEN_LPAREN || type == TOKEN_RPAREN || 
-             type == TOKEN_SEMICOLON || type == TOKEN_COMMA || type == TOKEN_DOT) {
-        delimiter_count++;
-        printf("[DEBUG] Delimiteur compte: %s\n", get_token_name(type));
-    } else {
-        // Cas par défaut si un jeton n'est pas catégorisé (cela ne devrait pas arriver)
-        printf("[DEBUG] ATTENTION: Token non categorise: %s\n", get_token_name(type));
-    }
-
-    /* ==========================================================
-     * AFFICHAGE DÉTAILLÉ (unchangé)
-     * ========================================================== */
-    if (verbose_mode) {
-        printf("Line %3d, Col %3d: %-18s", line_number, prev_column, get_token_name(type));
-        
-        /* Afficher la valeur pour certains types */
-        if (type == TOKEN_IDENTIFIER || type == TOKEN_INTEGER || 
-            type == TOKEN_HEX || type == TOKEN_STRING) {
-            printf(" -> '%s'", value);
-        }
-        printf("\n");
-    }
-    
-    /* Creer et stocker le token */
-    Token* token = create_token(type, value);
-    add_token_to_list(token);
-}
-void lexical_error(const char* message) {
-    error_count++;
-    fprintf(stderr, "\n");
-    fprintf(stderr, "===================================================================\n");
-    fprintf(stderr, " LEXICAL ERROR                                                     \n");
-    fprintf(stderr, "===================================================================\n");
-    fprintf(stderr, " File: input.crypt                                                 \n");
-    fprintf(stderr, " Line: %-3d  Character: %-3d                                       \n", 
-            line_number, prev_column);
-    fprintf(stderr, " Error: %-54s \n", message);
-    fprintf(stderr, "===================================================================\n");
-    fprintf(stderr, "\n");
-}
-
-/* Mettre a jour la colonne */
-void update_column() {
-    prev_column = column_number;
+/* Tracks column position for accurate error reporting */
+void count() {
     column_number += yyleng;
 }
 
-/* Liberer la memoire de la liste de tokens */
-void free_token_list() {
-    TokenNode* current = token_list_head;
-    while (current != NULL) {
-        TokenNode* next = current->next;
-        free(current->token->value);
-        free(current->token);
-        free(current);
-        current = next;
-    }
-}
-
-/* Afficher les statistiques detaillees */
-void print_statistics() {
-    printf("\n");
-    printf("===================================================================\n");
-    printf("                    ANALYSIS SUMMARY                              \n");
-    printf("===================================================================\n");
-    printf("                                                                   \n");
-    printf("  Total Tokens Recognized:  %-6d                                  \n", token_count);
-    printf("                                                                   \n");
-    printf("  Token Breakdown:                                                \n");
-    printf("    - Keywords:       %-6d                                        \n", keyword_count);
-    printf("    - Identifiers:    %-6d                                        \n", identifier_count);
-    printf("    - Operators:      %-6d                                        \n", operator_count);
-    printf("    - Literals:       %-6d                                        \n", literal_count);
-    printf("    - Delimiters:     %-6d                                        \n", delimiter_count);
-    printf("    - Comments:       %-6d                                        \n", comment_count);
-    printf("                                                                   \n");
-    printf("  Lexical Errors:       %-6d                                      \n", error_count);
-    printf("                                                                   \n");
-    if (error_count == 0) {
-        printf("  Status: SUCCESS - Lexical analysis completed successfully!    \n");
-    } else {
-        printf("  Status: ERROR - Lexical analysis completed with errors.       \n");
-    }
-    printf("                                                                   \n");
-    printf("===================================================================\n");
-}
-
-/* Afficher le header */
+/* COMPATIBILITY: Functions required by your main.c to prevent linker errors */
 void print_header(const char* filename) {
-    printf("\n");
-    printf("===================================================================\n");
-    printf("          CRYPTOLANG LEXICAL ANALYZER (FLEX)                      \n");
-    printf("===================================================================\n");
-    printf(" Project:  Compilateur CryptoLang                                 \n");
-    printf(" Version:  1.0.0                                                  \n");
-    printf(" Authors:  Hamadache, Allag, Foudili, Rabia                       \n");
-    printf(" File:     %-51s\n", filename ? filename : "stdin");
-    printf("===================================================================\n");
-    printf("\n");
     printf("-------------------------------------------------------------------\n");
-    printf("                      TOKEN ANALYSIS                              \n");
+    printf(" LEXICAL ANALYSIS : %s\n", filename ? filename : "stdin");
     printf("-------------------------------------------------------------------\n");
 }
 
-#line 952 "lex.yy.c"
-/* ============================================================================
- * DEFINITIONS DE MOTIFS
- * ============================================================================ */
-/* ============================================================================
- * OPTIONS FLEX
- * ============================================================================ */
-#line 959 "lex.yy.c"
+void print_statistics() {
+    printf("-------------------------------------------------------------------\n");
+    printf(" Analysis Complete (Lines: %d, Errors: %d)\n", line_number, error_count);
+    printf("-------------------------------------------------------------------\n");
+}
+
+/* Forward declaration to avoid warnings */
+void yyerror(const char *s); 
+
+#line 646 "build/lex.yy.c"
+/* Flex Options */
+/* Regular Expressions */
+#line 649 "build/lex.yy.c"
 
 #define INITIAL 0
 
@@ -1172,9 +863,12 @@ YY_DECL
 		}
 
 	{
-#line 368 "cryptolang2.l"
+#line 52 "src/lexer/cryptolang.l"
 
-#line 1178 "lex.yy.c"
+
+#line 55 "src/lexer/cryptolang.l"
+    /* --- WHITESPACE & NEWLINES --- */
+#line 871 "build/lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -1201,13 +895,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 193 )
+				if ( yy_current_state >= 195 )
 					yy_c = yy_meta[yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 238 );
+		while ( yy_base[yy_current_state] != 245 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -1242,525 +936,452 @@ do_action:	/* This label is used only to access EOF actions. */
 			goto yy_find_action;
 
 case 1:
+/* rule 1 can match eol */
 YY_RULE_SETUP
-#line 369 "cryptolang2.l"
-{ 
-                                comment_count++;
-                                update_column(); 
-                            }
+#line 56 "src/lexer/cryptolang.l"
+{ line_number++; column_number = 1; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 374 "cryptolang2.l"
-{
-                                comment_count++;
-                                update_column();
-                                int c;
-                                int start_line = line_number;
-                                int start_col = prev_column;
-                                
-                                while (1) {
-                                    c = input();
-                                    if (c == EOF) {
-                                        sprintf(error_buffer, 
-                                                "unterminated comment starting at line %d, column %d",
-                                                start_line, start_col);
-                                        lexical_error(error_buffer);
-                                        break;
-                                    }
-                                    if (c == '\n') {
-                                        line_number++;
-                                        column_number = 1;
-                                    } else {
-                                        column_number++;
-                                    }
-                                    if (c == '*') {
-                                        c = input();
-                                        if (c == '/') {
-                                            column_number++;
-                                            break;
-                                        }
-                                        unput(c);
-                                    }
-                                }
-                            }
+#line 57 "src/lexer/cryptolang.l"
+{ count(); }
 	YY_BREAK
+/* --- COMMENTS --- */
 case 3:
 YY_RULE_SETUP
-#line 407 "cryptolang2.l"
-{ 
-                                comment_count++;
-                                update_column(); 
-                            }
+#line 60 "src/lexer/cryptolang.l"
+{ count(); }
 	YY_BREAK
-/* =====================================================================
-     * MOTS-CLES DE STRUCTURE
-     * ===================================================================== */
 case 4:
+/* rule 4 can match eol */
 YY_RULE_SETUP
-#line 416 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_PROTOCOL, yytext); return TOKEN_PROTOCOL; }
+#line 61 "src/lexer/cryptolang.l"
+{ 
+    char *p = yytext;
+    while (*p) {
+        if (*p == '\n') { line_number++; column_number = 1; }
+        else column_number++;
+        p++;
+    }
+}
 	YY_BREAK
+/* --- STRUCTURE KEYWORDS --- */
 case 5:
 YY_RULE_SETUP
-#line 417 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_ENDPROTOCOL, yytext); return TOKEN_ENDPROTOCOL; }
+#line 71 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_PROTOCOL; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 418 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_IMPORT, yytext); return TOKEN_IMPORT; }
+#line 72 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_ENDPROTOCOL; }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 419 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_KEYSPACE, yytext); return TOKEN_KEYSPACE; }
+#line 73 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_IMPORT; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 420 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_MAIN, yytext); return TOKEN_MAIN; }
+#line 74 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_KEYSPACE; }
 	YY_BREAK
-/* =====================================================================
-     * MOTS-CLES DE CONTROLE
-     * ===================================================================== */
 case 9:
 YY_RULE_SETUP
-#line 426 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_LOOP, yytext); return TOKEN_LOOP; }
+#line 75 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_MAIN; }
 	YY_BREAK
+/* --- CONTROL FLOW --- */
 case 10:
 YY_RULE_SETUP
-#line 427 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_FOR, yytext); return TOKEN_FOR; }
+#line 78 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_LOOP; }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 428 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_ROTATE, yytext); return TOKEN_ROTATE; }
+#line 79 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_FOR; }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 429 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_STEP, yytext); return TOKEN_STEP; }
+#line 80 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_ROTATE; }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 430 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_ROUNDS, yytext); return TOKEN_ROUNDS; }
+#line 81 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_ROUNDS; }
 	YY_BREAK
-/* =====================================================================
-     * TYPES DE BASE
-     * ===================================================================== */
 case 14:
 YY_RULE_SETUP
-#line 436 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_BIT, yytext); return TOKEN_BIT; }
+#line 82 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_STEP; }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 437 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_NIBBLE, yytext); return TOKEN_NIBBLE; }
+#line 83 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_PACKET; }
 	YY_BREAK
+/* --- DATA TYPES --- */
 case 16:
 YY_RULE_SETUP
-#line 438 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_BYTE, yytext); return TOKEN_BYTE; }
+#line 86 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_BIT; }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 439 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_WORD, yytext); return TOKEN_WORD; }
+#line 87 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_NIBBLE; }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 440 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_DWORD, yytext); return TOKEN_DWORD; }
+#line 88 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_BYTE; }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 441 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_QWORD, yytext); return TOKEN_QWORD; }
+#line 89 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_WORD; }
 	YY_BREAK
-/* =====================================================================
-     * TYPES CRYPTOGRAPHIQUES
-     * ===================================================================== */
 case 20:
 YY_RULE_SETUP
-#line 447 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_PLAIN, yytext); return TOKEN_PLAIN; }
+#line 90 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_DWORD; }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 448 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_CIPHER, yytext); return TOKEN_CIPHER; }
+#line 91 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_QWORD; }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 449 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_HASH, yytext); return TOKEN_HASH; }
+#line 93 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_PLAIN; }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 450 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_KEY128, yytext); return TOKEN_KEY128; }
+#line 94 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_CIPHER; }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 451 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_KEY256, yytext); return TOKEN_KEY256; }
+#line 95 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_HASH; }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 452 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_KEY512, yytext); return TOKEN_KEY512; }
+#line 96 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_KEY128; }
 	YY_BREAK
-/* =====================================================================
-     * STRUCTURES
-     * ===================================================================== */
 case 26:
 YY_RULE_SETUP
-#line 458 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_PACKET, yytext); return TOKEN_PACKET; }
+#line 97 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_KEY256; }
 	YY_BREAK
-/* =====================================================================
-     * OPERATEURS SPECIAUX (ordre important!)
-     * ===================================================================== */
 case 27:
 YY_RULE_SETUP
-#line 464 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_SECURE_ASSIGN, yytext); return TOKEN_SECURE_ASSIGN; }
+#line 98 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_KEY512; }
 	YY_BREAK
+/* --- COMPLEX OPERATORS --- */
 case 28:
 YY_RULE_SETUP
-#line 465 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_DECLARE, yytext); return TOKEN_DECLARE; }
+#line 101 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_SECURE_ASSIGN; }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 466 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_IF, yytext); return TOKEN_IF; }
+#line 102 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_DECLARE; }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 467 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_ELIF, yytext); return TOKEN_ELIF; }
+#line 103 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_ASSIGN_LOOP; } /* Added for loops (i := 0) */
 	YY_BREAK
-/* =====================================================================
-     * OPERATEURS CRYPTOGRAPHIQUES
-     * ===================================================================== */
 case 31:
 YY_RULE_SETUP
-#line 473 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_ENCRYPT, yytext); return TOKEN_ENCRYPT; }
+#line 104 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_IF; }          /* Added for conditions */
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 474 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_DECRYPT, yytext); return TOKEN_DECRYPT; }
+#line 105 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_ELIF; }        /* Added for else-if */
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 475 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_HASH_CALC, yytext); return TOKEN_HASH_CALC; }
+#line 106 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_OUTPUT; }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 476 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_HASH_VERIFY, yytext); return TOKEN_HASH_VERIFY; }
+#line 107 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_INPUT; }
 	YY_BREAK
+/* --- BITWISE & LOGIC SHIFTS --- */
 case 35:
 YY_RULE_SETUP
-#line 477 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_SIGN, yytext); return TOKEN_SIGN; }
+#line 110 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_ROTATE_LEFT; }
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 478 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_VERIFY_SIGN, yytext); return TOKEN_VERIFY_SIGN; }
+#line 111 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_ROTATE_RIGHT; }
 	YY_BREAK
-/* =====================================================================
-     * OPERATEURS COMPOSES
-     * ===================================================================== */
 case 37:
 YY_RULE_SETUP
-#line 483 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_POWER, yytext); return TOKEN_POWER; }
+#line 112 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_SHIFT_LEFT; }
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 484 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_EQ, yytext); return TOKEN_EQ; }
+#line 113 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_SHIFT_RIGHT; }
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 485 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_NEQ, yytext); return TOKEN_NEQ; }
+#line 114 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_AND; }
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 486 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_LEQ, yytext); return TOKEN_LEQ; }
+#line 115 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_OR; }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 487 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_GEQ, yytext); return TOKEN_GEQ; }
+#line 116 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_XOR_LOGIC; }
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 488 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_AND, yytext); return TOKEN_AND; }
+#line 117 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_POWER; }
 	YY_BREAK
+/* --- COMPARISON --- */
 case 43:
 YY_RULE_SETUP
-#line 489 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_OR, yytext); return TOKEN_OR; }
+#line 120 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_EQ; }
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 490 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_XOR_LOGIC, yytext); return TOKEN_XOR_LOGIC; }
+#line 121 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_NEQ; }
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 491 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_SHIFT_LEFT, yytext); return TOKEN_SHIFT_LEFT; }
+#line 122 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_LEQ; }
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 492 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_SHIFT_RIGHT, yytext); return TOKEN_SHIFT_RIGHT; }
+#line 123 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_GEQ; }
 	YY_BREAK
+/* --- CRYPTO OPERATORS --- */
 case 47:
 YY_RULE_SETUP
-#line 493 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_OUTPUT, yytext); return TOKEN_OUTPUT; }
+#line 126 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_ENCRYPT; }
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 494 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_INPUT, yytext); return TOKEN_INPUT; }
+#line 127 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_DECRYPT; }
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
-#line 495 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_ROTATE_LEFT, yytext); return TOKEN_ROTATE_LEFT; }
+#line 128 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_HASH_CALC; }
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
-#line 496 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_ROTATE_RIGHT, yytext); return TOKEN_ROTATE_RIGHT; }
+#line 129 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_HASH_VERIFY; }
 	YY_BREAK
-/* =====================================================================
-     * OPERATEURS SIMPLES
-     * ===================================================================== */
 case 51:
 YY_RULE_SETUP
-#line 501 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_PLUS, yytext); return TOKEN_PLUS; }
+#line 130 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_SIGN; }
 	YY_BREAK
 case 52:
 YY_RULE_SETUP
-#line 502 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_MINUS, yytext); return TOKEN_MINUS; }
+#line 131 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_VERIFY_SIGN; }
 	YY_BREAK
+/* --- SINGLE CHAR OPERATORS --- */
 case 53:
 YY_RULE_SETUP
-#line 503 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_MULT, yytext); return TOKEN_MULT; }
+#line 134 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_PLUS; }
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
-#line 504 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_DIV, yytext); return TOKEN_DIV; }
+#line 135 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_MINUS; }
 	YY_BREAK
 case 55:
 YY_RULE_SETUP
-#line 505 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_MOD, yytext); return TOKEN_MOD; }
+#line 136 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_MULT; }
 	YY_BREAK
 case 56:
 YY_RULE_SETUP
-#line 506 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_ASSIGN, yytext); return TOKEN_ASSIGN; }
+#line 137 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_DIV; }
 	YY_BREAK
 case 57:
 YY_RULE_SETUP
-#line 507 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_LT, yytext); return TOKEN_LT; }
+#line 138 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_MOD; }
 	YY_BREAK
 case 58:
 YY_RULE_SETUP
-#line 508 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_GT, yytext); return TOKEN_GT; }
+#line 139 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_ASSIGN; }
 	YY_BREAK
 case 59:
 YY_RULE_SETUP
-#line 509 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_NOT, yytext); return TOKEN_NOT; }
+#line 140 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_LT; }
 	YY_BREAK
 case 60:
 YY_RULE_SETUP
-#line 510 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_BIT_AND, yytext); return TOKEN_BIT_AND; }
+#line 141 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_GT; }
 	YY_BREAK
 case 61:
 YY_RULE_SETUP
-#line 511 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_BIT_XOR, yytext); return TOKEN_BIT_XOR; }
+#line 142 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_NOT; }
 	YY_BREAK
 case 62:
 YY_RULE_SETUP
-#line 512 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_BIT_NOT, yytext); return TOKEN_BIT_NOT; }
+#line 143 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_BIT_AND; }
 	YY_BREAK
-/* =====================================================================
-     * DELIMITEURS
-     * ===================================================================== */
 case 63:
 YY_RULE_SETUP
-#line 518 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_LBRACE, yytext); return TOKEN_LBRACE; }
+#line 144 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_OR; }
 	YY_BREAK
 case 64:
 YY_RULE_SETUP
-#line 519 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_RBRACE, yytext); return TOKEN_RBRACE; }
+#line 145 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_BIT_XOR; }
 	YY_BREAK
 case 65:
 YY_RULE_SETUP
-#line 520 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_LBRACKET, yytext); return TOKEN_LBRACKET; }
+#line 146 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_BIT_NOT; }
 	YY_BREAK
+/* --- DELIMITERS --- */
 case 66:
 YY_RULE_SETUP
-#line 521 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_RBRACKET, yytext); return TOKEN_RBRACKET; }
+#line 149 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_LBRACE; }
 	YY_BREAK
 case 67:
 YY_RULE_SETUP
-#line 522 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_LPAREN, yytext); return TOKEN_LPAREN; }
+#line 150 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_RBRACE; }
 	YY_BREAK
 case 68:
 YY_RULE_SETUP
-#line 523 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_RPAREN, yytext); return TOKEN_RPAREN; }
+#line 151 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_LBRACKET; }
 	YY_BREAK
 case 69:
 YY_RULE_SETUP
-#line 524 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_SEMICOLON, yytext); return TOKEN_SEMICOLON; }
+#line 152 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_RBRACKET; }
 	YY_BREAK
 case 70:
 YY_RULE_SETUP
-#line 525 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_COMMA, yytext); return TOKEN_COMMA; }
+#line 153 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_LPAREN; }
 	YY_BREAK
 case 71:
 YY_RULE_SETUP
-#line 526 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_DOT, yytext); return TOKEN_DOT; }
+#line 154 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_RPAREN; }
 	YY_BREAK
 case 72:
 YY_RULE_SETUP
-#line 527 "cryptolang2.l"
-{ update_column(); print_token(TOKEN_COLON, yytext); return TOKEN_COLON; }
+#line 155 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_SEMICOLON; }
 	YY_BREAK
-/* =====================================================================
-     * LITTERAUX
-     * ===================================================================== */
 case 73:
 YY_RULE_SETUP
-#line 533 "cryptolang2.l"
-{ 
-                                update_column(); 
-                                if (yyleng > 66) {
-                                    lexical_error("hexadecimal literal too long");
-                                }
-                                print_token(TOKEN_HEX, yytext); 
-                                return TOKEN_HEX; 
-                            }
+#line 156 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_COMMA; }
 	YY_BREAK
 case 74:
 YY_RULE_SETUP
-#line 542 "cryptolang2.l"
-{ 
-                                update_column(); 
-                                if (yyleng > 20) {
-                                    lexical_error("integer literal too long");
-                                }
-                                print_token(TOKEN_INTEGER, yytext); 
-                                return TOKEN_INTEGER; 
-                            }
+#line 157 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_DOT; }
 	YY_BREAK
 case 75:
 YY_RULE_SETUP
-#line 551 "cryptolang2.l"
-{ 
-                                update_column(); 
-                                print_token(TOKEN_STRING, yytext); 
-                                return TOKEN_STRING; 
-                            }
+#line 158 "src/lexer/cryptolang.l"
+{ count(); return TOKEN_COLON; }
 	YY_BREAK
-/* =====================================================================
-     * IDENTIFIANTS
-     * ===================================================================== */
+/* --- LITERALS & IDENTIFIERS --- */
 case 76:
 YY_RULE_SETUP
-#line 561 "cryptolang2.l"
+#line 161 "src/lexer/cryptolang.l"
 { 
-                                update_column(); 
-                                if (yyleng > 255) {
-                                    lexical_error("identifier too long (max 255 characters)");
-                                }
-                                print_token(TOKEN_IDENTIFIER, yytext); 
-                                return TOKEN_IDENTIFIER; 
-                            }
+                          count(); 
+                          yylval.sval = strdup(yytext); 
+                          return TOKEN_HEX; 
+                        }
 	YY_BREAK
-/* =====================================================================
-     * ESPACES BLANCS
-     * ===================================================================== */
 case 77:
 YY_RULE_SETUP
-#line 574 "cryptolang2.l"
-{ update_column(); }
+#line 167 "src/lexer/cryptolang.l"
+{ 
+                          count(); 
+                          yylval.ival = atoi(yytext); 
+                          return TOKEN_INTEGER; 
+                        }
 	YY_BREAK
 case 78:
 /* rule 78 can match eol */
 YY_RULE_SETUP
-#line 575 "cryptolang2.l"
-{ line_number++; column_number = 1; }
+#line 173 "src/lexer/cryptolang.l"
+{ 
+                          count(); 
+                          yylval.sval = strdup(yytext); 
+                          return TOKEN_STRING; 
+                        }
 	YY_BREAK
-/* =====================================================================
-     * ERREURS
-     * ===================================================================== */
 case 79:
 YY_RULE_SETUP
-#line 581 "cryptolang2.l"
+#line 179 "src/lexer/cryptolang.l"
 { 
-                                update_column(); 
-                                lexical_error("unterminated string literal");
-                            }
+                          count(); 
+                          yylval.sval = strdup(yytext); 
+                          return TOKEN_IDENTIFIER; 
+                        }
 	YY_BREAK
+/* --- ERROR HANDLING --- */
 case 80:
 YY_RULE_SETUP
-#line 586 "cryptolang2.l"
+#line 186 "src/lexer/cryptolang.l"
 { 
-                                sprintf(error_buffer, 
-                                        "unrecognized character '%c' (ASCII: %d)", 
-                                        yytext[0], (unsigned char)yytext[0]);
-                                update_column();
-                                lexical_error(error_buffer);
-                            }
+                          printf("Lexical Error: Unknown character '%s' at line %d\n", yytext, line_number); 
+                          error_count++; 
+                        }
 	YY_BREAK
 case 81:
 YY_RULE_SETUP
-#line 594 "cryptolang2.l"
+#line 191 "src/lexer/cryptolang.l"
 ECHO;
 	YY_BREAK
-#line 1764 "lex.yy.c"
+#line 1384 "build/lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2057,7 +1678,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 193 )
+			if ( yy_current_state >= 195 )
 				yy_c = yy_meta[yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
@@ -2085,11 +1706,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 193 )
+		if ( yy_current_state >= 195 )
 			yy_c = yy_meta[yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
-	yy_is_jam = (yy_current_state == 192);
+	yy_is_jam = (yy_current_state == 194);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -2777,42 +2398,5 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 594 "cryptolang2.l"
-
-
-/* ============================================================================
- * FONCTION PRINCIPALE
- * ============================================================================ */
-
-int main(int argc, char** argv) {
-    FILE* input_file = NULL;
-    char* filename = NULL;
-    
-    if (argc > 1) {
-        filename = argv[1];
-        input_file = fopen(filename, "r");
-        if (!input_file) {
-            fprintf(stderr, "Error: Cannot open file '%s'\n", filename);
-            fprintf(stderr, "Usage: %s [input_file.crypt]\n", argv[0]);
-            return 1;
-        }
-        yyin = input_file;
-    } else {
-        filename = "stdin";
-        yyin = stdin;
-    }
-    
-    print_header(filename);
-    
-    while(yylex() != 0);
-    
-    print_statistics();
-    
-    if (input_file) {
-        fclose(input_file);
-    }
-    free_token_list();
-    
-    return (error_count > 0) ? 1 : 0;
-}
+#line 191 "src/lexer/cryptolang.l"
 

@@ -1,0 +1,45 @@
+@protocol MonPremierProgramme
+
+@import crypto.basic
+
+@keyspace {
+    // Déclarations globales
+    plain :: message = "Hello CryptoLang";
+    byte :: compteur = 0;
+    key256 :: cle_master;
+    cipher :: message_crypte;
+    hash :: empreinte;
+    
+    // Tableaux
+    byte[16] :: vecteur_init;
+    key256[5] :: pool_cles;
+}
+
+@main {
+    // Affichage simple
+    -> "Demarrage du programme...";
+    -> message;
+    
+    // Déclaration locale
+    byte :: nombre = 42;
+    
+    // Boucle simple
+    @for [ i := 0 -> 10 : step 1 ] {
+        -> i;
+    }
+    
+    // Condition
+    ?[ nombre < 50 ] {
+        -> "Nombre petit";
+    } :: {
+        -> "Nombre grand";
+    }
+    
+    // Opération cryptographique
+    message_crypte = message @> cle_master;
+    empreinte = message #>;
+    
+    -> "Fin du programme";
+}
+
+@endprotocol
