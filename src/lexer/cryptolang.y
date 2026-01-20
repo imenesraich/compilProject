@@ -77,7 +77,7 @@ void yyerror(const char* s);
    ================================================================== */
 
 program:
-    TOKEN_PROTOCOL TOKEN_IDENTIFIER imports keyspace_block main_block TOKEN_ENDPROTOCOL
+    TOKEN_PROTOCOL TOKEN_IDENTIFIER imports keyspace_block struct_definitions main_block TOKEN_ENDPROTOCOL
     { 
         printf("\n===================================================================\n");
         printf("  COMPILATION SUCCESS\n");
@@ -147,7 +147,10 @@ struct_fields:
     | struct_fields type_name TOKEN_DECLARE TOKEN_IDENTIFIER TOKEN_SEMICOLON
     | struct_fields type_name TOKEN_LBRACKET TOKEN_INTEGER TOKEN_RBRACKET TOKEN_DECLARE TOKEN_IDENTIFIER TOKEN_SEMICOLON
     ;
-
+struct_definitions:
+    /* vide */
+    | struct_definitions packet_definition
+    ;
 /* AJOUT: Cette règle retourne maintenant les vraies valeurs d'enum */
 type_name:
       TOKEN_BIT    { $$ = T_BIT; }

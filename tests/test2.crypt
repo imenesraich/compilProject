@@ -1,0 +1,11 @@
+@protocol MonPremierProgramme
+@import crypto . basic
+@keyspace {
+plain :: message = " Bonjour " ;
+byte :: nombre = 42;
+}
+@main {
+-> message ;
+-> " Le nombre est : " + nombre ;
+}
+@endprotocol
