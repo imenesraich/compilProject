@@ -1,0 +1,141 @@
+@protocol DemoChiffrementComplet
+@import crypto.basic
+
+@keyspace {
+    key256 :: cle_master = 0x123456789ABCDEF0123456789ABCDEF0;
+    byte :: compteur = 0;
+    plain[10] :: historique_messages;
+}
+
+packet MessageChiffre {
+    plain :: texte_original;
+    cipher :: texte_crypte;
+    hash :: empreinte;
+    byte[16] :: vecteur_iv;
+};
+
+@main {
+    MessageChiffre :: msg;
+    plain :: message;
+    byte :: choix;
+    bit :: continuer = 0x1;
+    
+    // Commentaire simple
+    -> "=== SYSTEME DE CHIFFREMENT SECURISE ===";
+    
+    /* Commentaire multiligne
+       pour expliquer le processus */
+    
+    #! ATTENTION: Cle de demonstration uniquement
+    
+    @loop [continuer == 0x1] {
+        -> "\n1. Chiffrer un message";
+        -> "2. Dechiffrer un message";
+        -> "3. Quitter";
+        -> "Votre choix: ";
+        <- choix;
+        
+        ?[choix == 1] {
+            -> "Entrez le message a chiffrer: ";
+            <- message;
+            
+            // Initialisation du vecteur IV
+            @for [i := 0 -> 16 : step 1] {
+                msg.vecteur_iv[i] = 0xFF;
+            }
+            
+            // Stockage texte original
+            msg.texte_original = message;
+            
+            // ERREUR SEMANTIQUE: Incompatibilité de types
+            byte :: nombre_texte = "ceci est un texte";
+            
+            // Chiffrement avec operateur cryptographique
+            msg.texte_crypte = message @> cle_master;
+            
+            // Calcul hash
+            msg.empreinte = msg.texte_crypte #>;
+            
+            -> "Message chiffre: " + msg.texte_crypte;
+            -> "Signature: " + toHex(msg.empreinte);
+            
+            // ERREUR SEMANTIQUE: Variable non déclarée
+            historique_inconnu[compteur] = message;
+            
+            // Sauvegarde dans historique
+            ?[compteur < 10] {
+                // ERREUR SEMANTIQUE: Dépassement d'indice
+                historique_messages[50] = message;
+                compteur = compteur + 1;
+            } :: {
+                -> "Historique plein!";
+            }
+            
+        } :[choix == 2] {
+            -> "Entrez le texte chiffre: ";
+            <- msg.texte_crypte;
+            
+            // Dechiffrement
+            plain :: texte_clair = msg.texte_crypte <@ cle_master;
+            
+            -> "Message dechiffre: " + texte_clair;
+            
+            // ERREUR SEMANTIQUE: Variable non initialisée
+            hash :: hash_non_init;
+            bit :: ok = verify(texte_clair, hash_non_init);
+            
+            ?[ok == 0x1] {
+                -> "Verification reussie!";
+            } :: {
+                -> "ERREUR: Verification echouee!";
+            }
+            
+        } :[choix == 3] {
+            continuer = 0x0;
+            -> "Au revoir!";
+            
+        } :: {
+            -> "Choix invalide!";
+        }
+    }
+    
+    // ERREUR SEMANTIQUE: Double déclaration
+    key256 :: cle_master = 0xABCDEF;
+    
+    // Demonstration boucle rotate (rounds AES)
+    cipher :: data = message @> cle_master;
+    @rotate [16 rounds] {
+        data = data ^ 0xAB;
+    }
+    
+    // Affichage historique
+    -> "\n=== HISTORIQUE DES MESSAGES ===";
+    @for [i := 0 -> compteur : step 1] {
+        -> "Message " + i + ": " + historique_messages[i];
+    }
+    
+    // ERREUR SEMANTIQUE: Opération entre types incompatibles
+    plain :: texte = "Bonjour";
+    byte :: nombre = 42;
+    plain :: resultat_invalide = texte + nombre;
+    
+    // Demonstration operations bitwise
+    byte :: val1 = 0xF0;
+    byte :: val2 = 0x0F;
+    byte :: resultat_and = val1 & val2;
+    byte :: resultat_xor = val1 ^ val2;
+    byte :: resultat_shift = val1 << 2;
+    byte :: resultat_rotate = val1 <<< 4;
+    
+    // ERREUR SEMANTIQUE: Mauvais type pour opérateur cryptographique
+    byte :: petit_val = 100;
+    cipher :: chiffre_invalide = petit_val @> cle_master;
+    
+    -> "\n=== OPERATIONS BITWISE ===";
+    -> "AND: " + toHex(resultat_and);
+    -> "XOR: " + toHex(resultat_xor);
+    -> "SHIFT LEFT: " + toHex(resultat_shift);
+    -> "ROTATE LEFT: " + toHex(resultat_rotate);
+}
+
+@endprotocol
