@@ -1,0 +1,11 @@
+@protocol Test
+@keyspace {
+byte :: x = 10;
+byte :: y = 5;
+}
+@main {
+byte :: z = x + y * 2;
+x = z - 3;
+-> x;
+}
+@endprotocol

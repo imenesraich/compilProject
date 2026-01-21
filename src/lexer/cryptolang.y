@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "ts.h" /* Indispensable pour inserer() et les types T_... */
+#include "ts.h"
 
 extern int yylex();
 extern int yyparse();
@@ -13,44 +13,35 @@ extern int error_count;
 void yyerror(const char* s);
 %}
 
-/* AJOUT: Réintégration du champ 'type' pour gérer T_BIT, T_BYTE, etc. */
 %union {
     int ival;
     char* sval;
-    int type; /* On utilise int pour stocker les enum TypeCL */
+    int type; 
 }
 
-/* --- TOKENS --- */
 %token <sval> TOKEN_IDENTIFIER TOKEN_STRING TOKEN_HEX
 %token <ival> TOKEN_INTEGER
 
-/* Structure */
 %token TOKEN_PROTOCOL TOKEN_ENDPROTOCOL TOKEN_IMPORT TOKEN_KEYSPACE TOKEN_MAIN
 %token TOKEN_LOOP TOKEN_FOR TOKEN_ROTATE TOKEN_ROUNDS TOKEN_STEP TOKEN_PACKET
 
-/* Types (Notez qu'ils n'ont pas de <type> ici, c'est la règle type_name qui l'aura) */
 %token TOKEN_BIT TOKEN_NIBBLE TOKEN_BYTE TOKEN_WORD TOKEN_DWORD TOKEN_QWORD
 %token TOKEN_PLAIN TOKEN_CIPHER TOKEN_HASH TOKEN_KEY128 TOKEN_KEY256 TOKEN_KEY512
 
-/* Opérateurs */
 %token TOKEN_SECURE_ASSIGN TOKEN_DECLARE TOKEN_ASSIGN_LOOP
 %token TOKEN_IF TOKEN_ELIF TOKEN_OUTPUT TOKEN_INPUT
 
-/* Maths & Logique */
 %token TOKEN_PLUS TOKEN_MINUS TOKEN_MULT TOKEN_DIV TOKEN_MOD TOKEN_ASSIGN
 %token TOKEN_EQ TOKEN_NEQ TOKEN_LT TOKEN_GT TOKEN_LEQ TOKEN_GEQ
 %token TOKEN_AND TOKEN_OR TOKEN_XOR_LOGIC TOKEN_NOT TOKEN_POWER
 %token TOKEN_BIT_AND TOKEN_BIT_OR TOKEN_BIT_XOR TOKEN_BIT_NOT
 %token TOKEN_ROTATE_LEFT TOKEN_ROTATE_RIGHT TOKEN_SHIFT_LEFT TOKEN_SHIFT_RIGHT
 
-/* Crypto */
 %token TOKEN_ENCRYPT TOKEN_DECRYPT TOKEN_HASH_CALC TOKEN_HASH_VERIFY TOKEN_SIGN TOKEN_VERIFY_SIGN
 
-/* Ponctuation */
 %token TOKEN_LBRACE TOKEN_RBRACE TOKEN_LBRACKET TOKEN_RBRACKET
 %token TOKEN_LPAREN TOKEN_RPAREN TOKEN_SEMICOLON TOKEN_COMMA TOKEN_DOT TOKEN_COLON
 
-/* Précédence */
 %right TOKEN_ASSIGN TOKEN_SECURE_ASSIGN
 %right TOKEN_ENCRYPT TOKEN_DECRYPT TOKEN_HASH_CALC TOKEN_HASH_VERIFY TOKEN_SIGN TOKEN_VERIFY_SIGN
 %left TOKEN_XOR_LOGIC
@@ -67,14 +58,9 @@ void yyerror(const char* s);
 %right TOKEN_POWER
 %left TOKEN_LPAREN TOKEN_RPAREN TOKEN_LBRACKET TOKEN_RBRACKET TOKEN_DOT
 
-/* AJOUT: On typé cette règle pour remonter T_BIT, T_BYTE... vers 'inserer' */
 %type <type> type_name
 
 %%
-
-/* ==================================================================
-   GRAMMAIRE
-   ================================================================== */
 
 program:
     TOKEN_PROTOCOL TOKEN_IDENTIFIER imports keyspace_block struct_definitions main_block TOKEN_ENDPROTOCOL
@@ -82,7 +68,7 @@ program:
         printf("\n===================================================================\n");
         printf("  COMPILATION SUCCESS\n");
         printf("===================================================================\n");
-        afficherTable(); /* Affiche la table remplie à la fin */
+        afficherTable();
     }
     ;
 
@@ -104,30 +90,27 @@ global_declaration:
     | packet_definition
     ;
 
-/* AJOUT: Appels à inserer(...) rétablis */
 variable_declaration:
-    /* Déclaration simple initialisée */
+
     type_name TOKEN_DECLARE TOKEN_IDENTIFIER TOKEN_ASSIGN expression TOKEN_SEMICOLON
     { 
-        inserer($3, $1, SYM_VAR, 1); /* <--- ICI */
+        inserer($3, $1, SYM_VAR, 1);
         printf("[PARSER] Global Var: %s initialized\n", $3); 
     }
-    /* Déclaration simple non-initialisée */
+
     | type_name TOKEN_DECLARE TOKEN_IDENTIFIER TOKEN_SEMICOLON
     { 
-        inserer($3, $1, SYM_VAR, 1); /* <--- ICI */
+        inserer($3, $1, SYM_VAR, 1);
         printf("[PARSER] Global Var: %s\n", $3); 
     }
-    /* Tableaux */
+
     | type_name TOKEN_LBRACKET TOKEN_INTEGER TOKEN_RBRACKET TOKEN_DECLARE TOKEN_IDENTIFIER TOKEN_SEMICOLON
     { 
-        inserer($6, $1, SYM_ARRAY, $3); /* <--- ICI (Taille = $3) */
+        inserer($6, $1, SYM_ARRAY, $3);
         printf("[PARSER] Global Array: %s[%d]\n", $6, $3); 
     }
-    /* Instances de Struct (Supposé type plain pour l'instant ou personnalisé) */
     | TOKEN_IDENTIFIER TOKEN_DECLARE TOKEN_IDENTIFIER TOKEN_SEMICOLON
     { 
-        /* Pour les struct, on met T_PLAIN par défaut si on ne gère pas les types customs */
         inserer($3, T_PLAIN, SYM_VAR, 1); 
         printf("[PARSER] Struct Instance: %s (Type: %s)\n", $3, $1); 
     }
@@ -148,10 +131,9 @@ struct_fields:
     | struct_fields type_name TOKEN_LBRACKET TOKEN_INTEGER TOKEN_RBRACKET TOKEN_DECLARE TOKEN_IDENTIFIER TOKEN_SEMICOLON
     ;
 struct_definitions:
-    /* vide */
+
     | struct_definitions packet_definition
     ;
-/* AJOUT: Cette règle retourne maintenant les vraies valeurs d'enum */
 type_name:
       TOKEN_BIT    { $$ = T_BIT; }
     | TOKEN_NIBBLE { $$ = T_NIBBLE; }
@@ -180,7 +162,7 @@ instructions:
     ;
 
 instruction:
-    variable_declaration /* Permet les variables locales */
+    variable_declaration 
     | assignment
     | io_statement
     | control_structure
@@ -225,7 +207,7 @@ loop_statement:
     { printf("[PARSER] Loop: WHILE\n"); }
     | TOKEN_FOR TOKEN_LBRACKET TOKEN_IDENTIFIER TOKEN_ASSIGN_LOOP expression TOKEN_OUTPUT expression TOKEN_COLON TOKEN_STEP expression TOKEN_RBRACKET block
     { 
-        /* On insère l'itérateur de boucle (local) */
+
         inserer($3, T_DWORD, SYM_VAR, 1); 
         printf("[PARSER] Loop: FOR (Explicit Step)\n"); 
     }

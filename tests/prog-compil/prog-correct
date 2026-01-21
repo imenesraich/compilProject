@@ -97,10 +97,8 @@ packet MessageChiffre {
     @rotate [16 rounds] {
         data = data ^ 0xAB;
     }
-    
-    // Affichage historique
     -> "\n=== HISTORIQUE DES MESSAGES ===";
-    @for [i := 0 -> compteur : step 1] {
+    @for [j := 0 -> compteur : step 1] {
         -> "Message " + i + ": " + historique_messages[i];
     }
     

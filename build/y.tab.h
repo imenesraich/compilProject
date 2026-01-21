@@ -137,11 +137,11 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 17 "src/lexer/cryptolang.y"
+#line 16 "src/lexer/cryptolang.y"
 
     int ival;
     char* sval;
-    int type; /* On utilise int pour stocker les enum TypeCL */
+    int type; 
 
 #line 147 "build/y.tab.h"
 

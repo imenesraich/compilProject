@@ -72,7 +72,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "ts.h" /* Indispensable pour inserer() et les types T_... */
+#include "ts.h"
 
 extern int yylex();
 extern int yyparse();
@@ -606,17 +606,17 @@ static const yytype_int8 yytranslate[] =
 /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_int16 yyrline[] =
 {
-       0,    80,    80,    89,    90,    91,    95,    98,    99,   103,
-     104,   110,   116,   122,   128,   134,   142,   146,   147,   148,
-     150,   152,   156,   157,   158,   159,   160,   161,   162,   163,
-     164,   165,   166,   167,   171,   175,   178,   179,   183,   184,
-     185,   186,   187,   191,   192,   196,   197,   198,   199,   203,
-     204,   205,   206,   210,   211,   215,   218,   219,   220,   224,
-     226,   232,   237,   242,   247,   248,   249,   250,   251,   252,
-     253,   254,   255,   256,   257,   258,   259,   260,   261,   262,
-     263,   264,   265,   266,   267,   268,   269,   270,   271,   272,
-     273,   274,   275,   276,   277,   281,   282,   283,   284,   285,
-     286,   287,   288,   289,   292,   293,   294
+       0,    66,    66,    75,    76,    77,    81,    84,    85,    89,
+      90,    95,   101,   107,   112,   117,   125,   129,   130,   131,
+     133,   135,   138,   139,   140,   141,   142,   143,   144,   145,
+     146,   147,   148,   149,   153,   157,   160,   161,   165,   166,
+     167,   168,   169,   173,   174,   178,   179,   180,   181,   185,
+     186,   187,   188,   192,   193,   197,   200,   201,   202,   206,
+     208,   214,   219,   224,   229,   230,   231,   232,   233,   234,
+     235,   236,   237,   238,   239,   240,   241,   242,   243,   244,
+     245,   246,   247,   248,   249,   250,   251,   252,   253,   254,
+     255,   256,   257,   258,   259,   263,   264,   265,   266,   267,
+     268,   269,   270,   271,   274,   275,   276
 };
 #endif
 
@@ -1525,182 +1525,181 @@ yyreduce:
   switch (yyn)
     {
   case 2: /* program: TOKEN_PROTOCOL TOKEN_IDENTIFIER imports keyspace_block struct_definitions main_block TOKEN_ENDPROTOCOL  */
-#line 81 "src/lexer/cryptolang.y"
+#line 67 "src/lexer/cryptolang.y"
     { 
         printf("\n===================================================================\n");
         printf("  COMPILATION SUCCESS\n");
         printf("===================================================================\n");
-        afficherTable(); /* Affiche la table remplie à la fin */
+        afficherTable();
     }
 #line 1536 "build/y.tab.c"
     break;
 
   case 11: /* variable_declaration: type_name TOKEN_DECLARE TOKEN_IDENTIFIER TOKEN_ASSIGN expression TOKEN_SEMICOLON  */
-#line 111 "src/lexer/cryptolang.y"
+#line 96 "src/lexer/cryptolang.y"
     { 
-        inserer((yyvsp[-3].sval), (yyvsp[-5].type), SYM_VAR, 1); /* <--- ICI */
+        inserer((yyvsp[-3].sval), (yyvsp[-5].type), SYM_VAR, 1);
         printf("[PARSER] Global Var: %s initialized\n", (yyvsp[-3].sval)); 
     }
 #line 1545 "build/y.tab.c"
     break;
 
   case 12: /* variable_declaration: type_name TOKEN_DECLARE TOKEN_IDENTIFIER TOKEN_SEMICOLON  */
-#line 117 "src/lexer/cryptolang.y"
+#line 102 "src/lexer/cryptolang.y"
     { 
-        inserer((yyvsp[-1].sval), (yyvsp[-3].type), SYM_VAR, 1); /* <--- ICI */
+        inserer((yyvsp[-1].sval), (yyvsp[-3].type), SYM_VAR, 1);
         printf("[PARSER] Global Var: %s\n", (yyvsp[-1].sval)); 
     }
 #line 1554 "build/y.tab.c"
     break;
 
   case 13: /* variable_declaration: type_name TOKEN_LBRACKET TOKEN_INTEGER TOKEN_RBRACKET TOKEN_DECLARE TOKEN_IDENTIFIER TOKEN_SEMICOLON  */
-#line 123 "src/lexer/cryptolang.y"
+#line 108 "src/lexer/cryptolang.y"
     { 
-        inserer((yyvsp[-1].sval), (yyvsp[-6].type), SYM_ARRAY, (yyvsp[-4].ival)); /* <--- ICI (Taille = $3) */
+        inserer((yyvsp[-1].sval), (yyvsp[-6].type), SYM_ARRAY, (yyvsp[-4].ival));
         printf("[PARSER] Global Array: %s[%d]\n", (yyvsp[-1].sval), (yyvsp[-4].ival)); 
     }
 #line 1563 "build/y.tab.c"
     break;
 
   case 14: /* variable_declaration: TOKEN_IDENTIFIER TOKEN_DECLARE TOKEN_IDENTIFIER TOKEN_SEMICOLON  */
-#line 129 "src/lexer/cryptolang.y"
+#line 113 "src/lexer/cryptolang.y"
     { 
-        /* Pour les struct, on met T_PLAIN par défaut si on ne gère pas les types customs */
         inserer((yyvsp[-1].sval), T_PLAIN, SYM_VAR, 1); 
         printf("[PARSER] Struct Instance: %s (Type: %s)\n", (yyvsp[-1].sval), (yyvsp[-3].sval)); 
     }
-#line 1573 "build/y.tab.c"
+#line 1572 "build/y.tab.c"
     break;
 
   case 15: /* variable_declaration: TOKEN_IDENTIFIER TOKEN_LBRACKET TOKEN_INTEGER TOKEN_RBRACKET TOKEN_DECLARE TOKEN_IDENTIFIER TOKEN_SEMICOLON  */
-#line 135 "src/lexer/cryptolang.y"
+#line 118 "src/lexer/cryptolang.y"
     { 
         inserer((yyvsp[-1].sval), T_PLAIN, SYM_ARRAY, (yyvsp[-4].ival));
         printf("[PARSER] Struct Array: %s[%d]\n", (yyvsp[-1].sval), (yyvsp[-4].ival)); 
     }
-#line 1582 "build/y.tab.c"
+#line 1581 "build/y.tab.c"
     break;
 
   case 16: /* packet_definition: TOKEN_PACKET TOKEN_IDENTIFIER TOKEN_LBRACE struct_fields TOKEN_RBRACE TOKEN_SEMICOLON  */
-#line 143 "src/lexer/cryptolang.y"
+#line 126 "src/lexer/cryptolang.y"
     { printf("[PARSER] Packet Definition: %s\n", (yyvsp[-4].sval)); }
-#line 1588 "build/y.tab.c"
+#line 1587 "build/y.tab.c"
     break;
 
   case 22: /* type_name: TOKEN_BIT  */
-#line 156 "src/lexer/cryptolang.y"
+#line 138 "src/lexer/cryptolang.y"
                    { (yyval.type) = T_BIT; }
-#line 1594 "build/y.tab.c"
+#line 1593 "build/y.tab.c"
     break;
 
   case 23: /* type_name: TOKEN_NIBBLE  */
-#line 157 "src/lexer/cryptolang.y"
+#line 139 "src/lexer/cryptolang.y"
                    { (yyval.type) = T_NIBBLE; }
-#line 1600 "build/y.tab.c"
+#line 1599 "build/y.tab.c"
     break;
 
   case 24: /* type_name: TOKEN_BYTE  */
-#line 158 "src/lexer/cryptolang.y"
+#line 140 "src/lexer/cryptolang.y"
                    { (yyval.type) = T_BYTE; }
-#line 1606 "build/y.tab.c"
+#line 1605 "build/y.tab.c"
     break;
 
   case 25: /* type_name: TOKEN_WORD  */
-#line 159 "src/lexer/cryptolang.y"
+#line 141 "src/lexer/cryptolang.y"
                    { (yyval.type) = T_WORD; }
-#line 1612 "build/y.tab.c"
+#line 1611 "build/y.tab.c"
     break;
 
   case 26: /* type_name: TOKEN_DWORD  */
-#line 160 "src/lexer/cryptolang.y"
+#line 142 "src/lexer/cryptolang.y"
                    { (yyval.type) = T_DWORD; }
-#line 1618 "build/y.tab.c"
+#line 1617 "build/y.tab.c"
     break;
 
   case 27: /* type_name: TOKEN_QWORD  */
-#line 161 "src/lexer/cryptolang.y"
+#line 143 "src/lexer/cryptolang.y"
                    { (yyval.type) = T_QWORD; }
-#line 1624 "build/y.tab.c"
+#line 1623 "build/y.tab.c"
     break;
 
   case 28: /* type_name: TOKEN_PLAIN  */
-#line 162 "src/lexer/cryptolang.y"
+#line 144 "src/lexer/cryptolang.y"
                    { (yyval.type) = T_PLAIN; }
-#line 1630 "build/y.tab.c"
+#line 1629 "build/y.tab.c"
     break;
 
   case 29: /* type_name: TOKEN_CIPHER  */
-#line 163 "src/lexer/cryptolang.y"
+#line 145 "src/lexer/cryptolang.y"
                    { (yyval.type) = T_CIPHER; }
-#line 1636 "build/y.tab.c"
+#line 1635 "build/y.tab.c"
     break;
 
   case 30: /* type_name: TOKEN_HASH  */
-#line 164 "src/lexer/cryptolang.y"
+#line 146 "src/lexer/cryptolang.y"
                    { (yyval.type) = T_HASH; }
-#line 1642 "build/y.tab.c"
+#line 1641 "build/y.tab.c"
     break;
 
   case 31: /* type_name: TOKEN_KEY128  */
-#line 165 "src/lexer/cryptolang.y"
+#line 147 "src/lexer/cryptolang.y"
                    { (yyval.type) = T_KEY128; }
-#line 1648 "build/y.tab.c"
+#line 1647 "build/y.tab.c"
     break;
 
   case 32: /* type_name: TOKEN_KEY256  */
-#line 166 "src/lexer/cryptolang.y"
+#line 148 "src/lexer/cryptolang.y"
                    { (yyval.type) = T_KEY256; }
-#line 1654 "build/y.tab.c"
+#line 1653 "build/y.tab.c"
     break;
 
   case 33: /* type_name: TOKEN_KEY512  */
-#line 167 "src/lexer/cryptolang.y"
+#line 149 "src/lexer/cryptolang.y"
                    { (yyval.type) = T_KEY512; }
-#line 1660 "build/y.tab.c"
+#line 1659 "build/y.tab.c"
     break;
 
   case 59: /* loop_statement: TOKEN_LOOP TOKEN_LBRACKET expression TOKEN_RBRACKET block  */
-#line 225 "src/lexer/cryptolang.y"
+#line 207 "src/lexer/cryptolang.y"
     { printf("[PARSER] Loop: WHILE\n"); }
-#line 1666 "build/y.tab.c"
+#line 1665 "build/y.tab.c"
     break;
 
   case 60: /* loop_statement: TOKEN_FOR TOKEN_LBRACKET TOKEN_IDENTIFIER TOKEN_ASSIGN_LOOP expression TOKEN_OUTPUT expression TOKEN_COLON TOKEN_STEP expression TOKEN_RBRACKET block  */
-#line 227 "src/lexer/cryptolang.y"
+#line 209 "src/lexer/cryptolang.y"
     { 
-        /* On insère l'itérateur de boucle (local) */
+
         inserer((yyvsp[-9].sval), T_DWORD, SYM_VAR, 1); 
         printf("[PARSER] Loop: FOR (Explicit Step)\n"); 
     }
-#line 1676 "build/y.tab.c"
+#line 1675 "build/y.tab.c"
     break;
 
   case 61: /* loop_statement: TOKEN_FOR TOKEN_LBRACKET TOKEN_IDENTIFIER TOKEN_ASSIGN_LOOP expression TOKEN_OUTPUT expression TOKEN_STEP expression TOKEN_RBRACKET block  */
-#line 233 "src/lexer/cryptolang.y"
+#line 215 "src/lexer/cryptolang.y"
     { 
         inserer((yyvsp[-8].sval), T_DWORD, SYM_VAR, 1);
         printf("[PARSER] Loop: FOR (No Colon Step)\n"); 
     }
-#line 1685 "build/y.tab.c"
+#line 1684 "build/y.tab.c"
     break;
 
   case 62: /* loop_statement: TOKEN_FOR TOKEN_LBRACKET TOKEN_IDENTIFIER TOKEN_ASSIGN_LOOP expression TOKEN_OUTPUT expression TOKEN_RBRACKET block  */
-#line 238 "src/lexer/cryptolang.y"
+#line 220 "src/lexer/cryptolang.y"
     { 
         inserer((yyvsp[-6].sval), T_DWORD, SYM_VAR, 1);
         printf("[PARSER] Loop: FOR (Default Step)\n"); 
     }
-#line 1694 "build/y.tab.c"
+#line 1693 "build/y.tab.c"
     break;
 
   case 63: /* loop_statement: TOKEN_ROTATE TOKEN_LBRACKET expression TOKEN_ROUNDS TOKEN_RBRACKET block  */
-#line 243 "src/lexer/cryptolang.y"
+#line 225 "src/lexer/cryptolang.y"
     { printf("[PARSER] Loop: ROTATE\n"); }
-#line 1700 "build/y.tab.c"
+#line 1699 "build/y.tab.c"
     break;
 
 
-#line 1704 "build/y.tab.c"
+#line 1703 "build/y.tab.c"
 
       default: break;
     }
@@ -1893,7 +1892,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 297 "src/lexer/cryptolang.y"
+#line 279 "src/lexer/cryptolang.y"
 
 
 void yyerror(const char *s) {
