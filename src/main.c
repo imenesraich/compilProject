@@ -3,7 +3,6 @@
 #include <string.h>
 #include "ts.h"
 
-/* Déclarations externes du lexer et parser */
 extern int yylex();
 extern int yyparse();
 extern FILE* yyin;
@@ -18,15 +17,13 @@ extern int literal_count;
 extern int delimiter_count;
 extern int comment_count;
 
-/* Prototypes de fonctions utilitaires */
 void print_header(const char* filename);
 void print_statistics();
 
-/* Mode de fonctionnement */
 typedef enum {
-    MODE_LEXER_ONLY,    /* Analyse lexicale uniquement */
-    MODE_PARSER_ONLY,   /* Analyse syntaxique uniquement */
-    MODE_FULL           /* Analyse complète */
+    MODE_LEXER_ONLY,    
+    MODE_PARSER_ONLY,   
+    MODE_FULL           
 } CompilationMode;
 
 void print_usage(const char* program_name) {
@@ -45,10 +42,7 @@ void print_usage(const char* program_name) {
 int main(int argc, char** argv) {
     CompilationMode mode = MODE_FULL;
     char* input_file = NULL;
-    
-    /* =====================================================
-     * TRAITEMENT DES ARGUMENTS
-     * ===================================================== */
+
     for (int i = 1; i < argc; i++) {
         if (strcmp(argv[i], "-l") == 0 || strcmp(argv[i], "--lexer") == 0) {
             mode = MODE_LEXER_ONLY;
@@ -72,10 +66,7 @@ int main(int argc, char** argv) {
             return 1;
         }
     }
-    
-    /* =====================================================
-     * OUVERTURE DU FICHIER D'ENTRÉE
-     * ===================================================== */
+
     if (input_file) {
         yyin = fopen(input_file, "r");
         if (!yyin) {
@@ -87,34 +78,27 @@ int main(int argc, char** argv) {
         print_usage(argv[0]);
         return 1;
     }
-    
-    /* =====================================================
-     * INITIALISATION
-     * ===================================================== */
+
     initTable();
-    
-    /* =====================================================
-     * COMPILATION SELON LE MODE
-     * ===================================================== */
+
     int result = 0;
-    
+
     switch (mode) {
         case MODE_LEXER_ONLY:
-            /* Mode analyse lexicale uniquement */
+
             print_header(input_file);
-            
+
             int token;
             while ((token = yylex()) != 0) {
-                /* Les tokens sont déjà affichés par le lexer */
             }
-            
+
             print_statistics();
             result = (error_count > 0) ? 1 : 0;
             break;
-            
+
         case MODE_PARSER_ONLY:
         case MODE_FULL:
-            /* Mode analyse syntaxique (avec lexer intégré) */
+
             printf("\n");
             printf("===================================================================\n");
             printf("          CRYPTOLANG COMPILER                                     \n");
@@ -124,19 +108,18 @@ int main(int argc, char** argv) {
             printf(" File: %-54s\n", input_file);
             printf("===================================================================\n");
             printf("\n");
-            
+
             result = yyparse();
-            
+
             if (result == 0) {
                 printf("\n");
                 printf("===================================================================\n");
                 printf("  COMPILATION TERMINÉE AVEC SUCCÈS                                \n");
                 printf("===================================================================\n");
-                
-                /* Afficher la table des symboles */
+
                 printf("\n");
                 afficherTable();
-                
+
                 printf("\n");
                 printf("===================================================================\n");
                 printf("  Statistiques:                                                   \n");
@@ -153,13 +136,11 @@ int main(int argc, char** argv) {
             }
             break;
     }
-    
-    /* =====================================================
-     * NETTOYAGE
-     * ===================================================== */
+
     if (yyin && yyin != stdin) {
         fclose(yyin);
     }
-    
+
     return result;
 }
+
